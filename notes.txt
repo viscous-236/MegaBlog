@@ -1,0 +1,5 @@
+// Enviorment Variables files is formed as .env which is to be then stored in .gitignore
+// This is done to prevent the exposure of sensitive information to the public
+console.log(process.env.REACT_APP_APPWRITE_URL); this will throw an error as we are making project usuing Vite-react and it is a method of create-react-app
+
+for vite-react we use import.meta.env.VITE_APPWRITE_URL
