@@ -23,7 +23,7 @@ function Post() {
     },[slug, navigate])
 
     const deletePost = () => {
-        service.deleltePost(slug).then((status) => {
+        service.deletePost(slug).then((status) => {
             if(status) {
                 service.deleteFile(post.featuredImage)
                 navigate('/')
