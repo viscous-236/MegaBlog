@@ -41,9 +41,7 @@ function Post() {
                     alt={post.title}
                     className='rounded-xl'
                     />
-
-                    {isAuthor && (
-                        <div className='absolute right-6 top-6'>
+                    {isAuthor && <div className='absolute right-6 top-6'>
                             <Link to={`/edit-post/${post.$id}`}>
                                 <Button
                                 className='mr-3'
@@ -58,7 +56,7 @@ function Post() {
                                 Delete
                             </Button>
                         </div>
-                    )}
+                    }
                 </div>
                 <div className='w-full mb-6'>
                     <h1 className='text 2-xl font-bold'>
