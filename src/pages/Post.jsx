@@ -12,7 +12,7 @@ function Post() {
     const userData = useSelector(state => state.auth.userData)
     const isAuthor = post && userData ? post.userId === userData.$id : false
     
-    console.log('Redux userData:', userData);
+    console.log('Redux state', useSelector(state => state));
     console.log('userData:', userData);
 
     useEffect(() => {
