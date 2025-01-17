@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../store/authSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import authService from '../appwrite/auth'
 import { useForm } from 'react-hook-form'
 import { Button , Input, Logo} from './index'
@@ -24,6 +24,7 @@ function Login() {
                     console.log("Dispatched");
                     navigate('/')
                     console.log("Navigated");
+                    console.log("Redux state", useSelector(state => state));
                     
                 }
             }
