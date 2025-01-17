@@ -16,11 +16,16 @@ function Login() {
         setError('')
         try {
             const session = await authService.login(data);
+            console.log("session", session);
             if(session){
                 const userData = await authService.getCurrentuser();
+                console.log("userData", userData);
                 if(userData){
                     dispatch(authLogin(userData))
+                    console.log("Dispatched");
                     navigate('/')
+                    console.log("Navigated");
+                    
                 }
             }
         } catch (error) {
