@@ -24,7 +24,6 @@ function Login() {
                     console.log("Dispatched");
                     navigate('/')
                     console.log("Navigated");
-                    console.log("Redux state", useSelector(state => state));
                     
                 }
             }
